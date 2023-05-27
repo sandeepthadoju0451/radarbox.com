@@ -17,3 +17,17 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('radarbox.com')
+
+WebUI.maximizeWindow()
+
+WebUI.click(findTestObject('RadarBox/MapOptions/btnMapOptions'))
+
+WebUI.click(findTestObject('RadarBox/MapOptions/btnFlatView'))
+
+WebUI.verifyElementPresent(findTestObject('RadarBox/MapOptions/lblFlatViewActive'), 10)
+
+WebUI.closeBrowser()
+

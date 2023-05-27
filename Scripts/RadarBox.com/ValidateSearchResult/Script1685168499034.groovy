@@ -25,11 +25,17 @@ WebUI.maximizeWindow()
 
 WebUI.click(findTestObject('RadarBox/Search/btnSearch'))
 
-WebUI.setText(findTestObject('RadarBox/Search/txtFlightAirportSearchBox'), 'Ragiv Gandhi Inter')
+WebUI.setText(findTestObject('RadarBox/Search/txtFlightAirportSearchBox'), 'Rajiv Gandhi Inter')
 
 WebUI.click(findTestObject('RadarBox/Search/btnSearchResultOne'))
 
 WebUI.click(findTestObject('RadarBox/Search/btnLocateOnMap'))
 
 WebUI.verifyElementPresent(findTestObject('RadarBox/Search/lblSearchResult'), 10)
+
+String result = WebUI.getText(findTestObject('RadarBox/Search/lblSearchResult'))
+
+WebUI.verifyEqual(result, 'Rajiv Gandhi Intl. Airport, Shamshabad')
+
+WebUI.closeBrowser()
 
